@@ -13,7 +13,7 @@ const translate = new Translate({
 });
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
@@ -49,7 +49,7 @@ app.post('/translate/backward', async (req, res) => {
 
         res.json({
             sourceLanguage,
-            targetLanguage: 'Your Default Target Language', // Gantilah dengan bahasa target default Anda
+            targetLanguage: 'su',
             translatedText,
         });
     } catch (error) {
